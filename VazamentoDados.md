@@ -105,236 +105,73 @@ warnings.filterwarnings('ignore')
 ```
 
     --- Instalando bibliotecas. Isso pode levar alguns minutos... ---
-    Collecting pandas
-      Using cached pandas-2.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
-    Collecting praw
-      Downloading praw-7.8.1-py3-none-any.whl.metadata (9.4 kB)
-    Collecting spacy
-      Downloading spacy-3.8.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (27 kB)
-    Collecting nltk
-      Downloading nltk-3.9.1-py3-none-any.whl.metadata (2.9 kB)
-    Collecting vaderSentiment
-      Downloading vaderSentiment-3.3.2-py2.py3-none-any.whl.metadata (572 bytes)
-    Collecting matplotlib
-      Downloading matplotlib-3.9.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
-    Collecting seaborn
-      Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
-    Collecting numpy>=1.22.4 (from pandas)
-      Using cached numpy-2.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+    Requirement already satisfied: pandas in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (2.3.0)
+    Requirement already satisfied: praw in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (7.8.1)
+    Requirement already satisfied: spacy in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (3.8.7)
+    Requirement already satisfied: nltk in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (3.9.1)
+    Requirement already satisfied: vaderSentiment in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (3.3.2)
+    Requirement already satisfied: matplotlib in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (3.9.4)
+    Requirement already satisfied: seaborn in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (0.13.2)
+    Requirement already satisfied: numpy>=1.22.4 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from pandas) (2.0.2)
     Requirement already satisfied: python-dateutil>=2.8.2 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from pandas) (2.9.0.post0)
-    Collecting pytz>=2020.1 (from pandas)
-      Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
-    Collecting tzdata>=2022.7 (from pandas)
-      Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
-    Collecting prawcore<3,>=2.4 (from praw)
-      Downloading prawcore-2.4.0-py3-none-any.whl.metadata (5.0 kB)
-    Collecting update_checker>=0.18 (from praw)
-      Downloading update_checker-0.18.0-py3-none-any.whl.metadata (2.3 kB)
+    Requirement already satisfied: pytz>=2020.1 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from pandas) (2025.2)
+    Requirement already satisfied: tzdata>=2022.7 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from pandas) (2025.2)
+    Requirement already satisfied: prawcore<3,>=2.4 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from praw) (2.4.0)
+    Requirement already satisfied: update_checker>=0.18 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from praw) (0.18.0)
     Requirement already satisfied: websocket-client>=0.54.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from praw) (1.8.0)
     Requirement already satisfied: requests<3.0,>=2.6.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from prawcore<3,>=2.4->praw) (2.32.4)
     Requirement already satisfied: charset_normalizer<4,>=2 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw) (3.4.2)
     Requirement already satisfied: idna<4,>=2.5 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw) (3.10)
     Requirement already satisfied: urllib3<3,>=1.21.1 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw) (2.5.0)
     Requirement already satisfied: certifi>=2017.4.17 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw) (2025.6.15)
-    Collecting spacy-legacy<3.1.0,>=3.0.11 (from spacy)
-      Downloading spacy_legacy-3.0.12-py2.py3-none-any.whl.metadata (2.8 kB)
-    Collecting spacy-loggers<2.0.0,>=1.0.0 (from spacy)
-      Downloading spacy_loggers-1.0.5-py3-none-any.whl.metadata (23 kB)
-    Collecting murmurhash<1.1.0,>=0.28.0 (from spacy)
-      Downloading murmurhash-1.0.13-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.2 kB)
-    Collecting cymem<2.1.0,>=2.0.2 (from spacy)
-      Downloading cymem-2.0.11-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
-    Collecting preshed<3.1.0,>=3.0.2 (from spacy)
-      Downloading preshed-3.0.10-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.4 kB)
-    Collecting thinc<8.4.0,>=8.3.4 (from spacy)
-      Downloading thinc-8.3.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (15 kB)
-    Collecting wasabi<1.2.0,>=0.9.1 (from spacy)
-      Downloading wasabi-1.1.3-py3-none-any.whl.metadata (28 kB)
-    Collecting srsly<3.0.0,>=2.4.3 (from spacy)
-      Downloading srsly-2.5.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
-    Collecting catalogue<2.1.0,>=2.0.6 (from spacy)
-      Downloading catalogue-2.0.10-py3-none-any.whl.metadata (14 kB)
-    Collecting weasel<0.5.0,>=0.1.0 (from spacy)
-      Downloading weasel-0.4.1-py3-none-any.whl.metadata (4.6 kB)
-    Collecting typer<1.0.0,>=0.3.0 (from spacy)
-      Downloading typer-0.16.0-py3-none-any.whl.metadata (15 kB)
-    Collecting tqdm<5.0.0,>=4.38.0 (from spacy)
-      Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
-    Collecting pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4 (from spacy)
-      Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+    Requirement already satisfied: spacy-legacy<3.1.0,>=3.0.11 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (3.0.12)
+    Requirement already satisfied: spacy-loggers<2.0.0,>=1.0.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (1.0.5)
+    Requirement already satisfied: murmurhash<1.1.0,>=0.28.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (1.0.13)
+    Requirement already satisfied: cymem<2.1.0,>=2.0.2 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (2.0.11)
+    Requirement already satisfied: preshed<3.1.0,>=3.0.2 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (3.0.10)
+    Requirement already satisfied: thinc<8.4.0,>=8.3.4 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (8.3.6)
+    Requirement already satisfied: wasabi<1.2.0,>=0.9.1 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (1.1.3)
+    Requirement already satisfied: srsly<3.0.0,>=2.4.3 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (2.5.1)
+    Requirement already satisfied: catalogue<2.1.0,>=2.0.6 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (2.0.10)
+    Requirement already satisfied: weasel<0.5.0,>=0.1.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (0.4.1)
+    Requirement already satisfied: typer<1.0.0,>=0.3.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (0.16.0)
+    Requirement already satisfied: tqdm<5.0.0,>=4.38.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (4.67.1)
+    Requirement already satisfied: pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (2.11.7)
     Requirement already satisfied: jinja2 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (3.1.6)
     Requirement already satisfied: setuptools in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (78.1.1)
     Requirement already satisfied: packaging>=20.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (25.0)
-    Collecting langcodes<4.0.0,>=3.2.0 (from spacy)
-      Downloading langcodes-3.5.0-py3-none-any.whl.metadata (29 kB)
-    Collecting language-data>=1.2 (from langcodes<4.0.0,>=3.2.0->spacy)
-      Downloading language_data-1.3.0-py3-none-any.whl.metadata (4.3 kB)
-    Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy)
-      Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
-    Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy)
-      Downloading pydantic_core-2.33.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+    Requirement already satisfied: langcodes<4.0.0,>=3.2.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from spacy) (3.5.0)
+    Requirement already satisfied: language-data>=1.2 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from langcodes<4.0.0,>=3.2.0->spacy) (1.3.0)
+    Requirement already satisfied: annotated-types>=0.6.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy) (0.7.0)
+    Requirement already satisfied: pydantic-core==2.33.2 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy) (2.33.2)
     Requirement already satisfied: typing-extensions>=4.12.2 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy) (4.14.0)
-    Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy)
-      Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
-    Collecting blis<1.4.0,>=1.3.0 (from thinc<8.4.0,>=8.3.4->spacy)
-      Using cached blis-1.3.0-cp39-cp39-linux_x86_64.whl
-    Collecting confection<1.0.0,>=0.0.1 (from thinc<8.4.0,>=8.3.4->spacy)
-      Downloading confection-0.1.5-py3-none-any.whl.metadata (19 kB)
-    Collecting click>=8.0.0 (from typer<1.0.0,>=0.3.0->spacy)
-      Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
-    Collecting shellingham>=1.3.0 (from typer<1.0.0,>=0.3.0->spacy)
-      Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
-    Collecting rich>=10.11.0 (from typer<1.0.0,>=0.3.0->spacy)
-      Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
-    Collecting cloudpathlib<1.0.0,>=0.7.0 (from weasel<0.5.0,>=0.1.0->spacy)
-      Downloading cloudpathlib-0.21.1-py3-none-any.whl.metadata (14 kB)
-    Collecting smart-open<8.0.0,>=5.2.1 (from weasel<0.5.0,>=0.1.0->spacy)
-      Downloading smart_open-7.1.0-py3-none-any.whl.metadata (24 kB)
-    Collecting wrapt (from smart-open<8.0.0,>=5.2.1->weasel<0.5.0,>=0.1.0->spacy)
-      Downloading wrapt-1.17.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
-    Collecting joblib (from nltk)
-      Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
-    Collecting regex>=2021.8.3 (from nltk)
-      Downloading regex-2024.11.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)
-    Collecting contourpy>=1.0.1 (from matplotlib)
-      Downloading contourpy-1.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.4 kB)
-    Collecting cycler>=0.10 (from matplotlib)
-      Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
-    Collecting fonttools>=4.22.0 (from matplotlib)
-      Downloading fonttools-4.58.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (106 kB)
-    Collecting kiwisolver>=1.3.1 (from matplotlib)
-      Downloading kiwisolver-1.4.7-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.3 kB)
-    Collecting pillow>=8 (from matplotlib)
-      Downloading pillow-11.2.1-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (8.9 kB)
-    Collecting pyparsing>=2.3.1 (from matplotlib)
-      Downloading pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
-    Collecting importlib-resources>=3.2.0 (from matplotlib)
-      Downloading importlib_resources-6.5.2-py3-none-any.whl.metadata (3.9 kB)
+    Requirement already satisfied: typing-inspection>=0.4.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy) (0.4.1)
+    Requirement already satisfied: blis<1.4.0,>=1.3.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from thinc<8.4.0,>=8.3.4->spacy) (1.3.0)
+    Requirement already satisfied: confection<1.0.0,>=0.0.1 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from thinc<8.4.0,>=8.3.4->spacy) (0.1.5)
+    Requirement already satisfied: click>=8.0.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from typer<1.0.0,>=0.3.0->spacy) (8.1.8)
+    Requirement already satisfied: shellingham>=1.3.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from typer<1.0.0,>=0.3.0->spacy) (1.5.4)
+    Requirement already satisfied: rich>=10.11.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from typer<1.0.0,>=0.3.0->spacy) (14.0.0)
+    Requirement already satisfied: cloudpathlib<1.0.0,>=0.7.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from weasel<0.5.0,>=0.1.0->spacy) (0.21.1)
+    Requirement already satisfied: smart-open<8.0.0,>=5.2.1 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from weasel<0.5.0,>=0.1.0->spacy) (7.1.0)
+    Requirement already satisfied: wrapt in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from smart-open<8.0.0,>=5.2.1->weasel<0.5.0,>=0.1.0->spacy) (1.17.2)
+    Requirement already satisfied: joblib in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from nltk) (1.5.1)
+    Requirement already satisfied: regex>=2021.8.3 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from nltk) (2024.11.6)
+    Requirement already satisfied: contourpy>=1.0.1 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from matplotlib) (1.3.0)
+    Requirement already satisfied: cycler>=0.10 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from matplotlib) (0.12.1)
+    Requirement already satisfied: fonttools>=4.22.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from matplotlib) (4.58.4)
+    Requirement already satisfied: kiwisolver>=1.3.1 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from matplotlib) (1.4.7)
+    Requirement already satisfied: pillow>=8 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from matplotlib) (11.2.1)
+    Requirement already satisfied: pyparsing>=2.3.1 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from matplotlib) (3.2.3)
+    Requirement already satisfied: importlib-resources>=3.2.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from matplotlib) (6.5.2)
     Requirement already satisfied: zipp>=3.1.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from importlib-resources>=3.2.0->matplotlib) (3.23.0)
-    Collecting marisa-trie>=1.1.0 (from language-data>=1.2->langcodes<4.0.0,>=3.2.0->spacy)
-      Downloading marisa_trie-1.2.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.0 kB)
+    Requirement already satisfied: marisa-trie>=1.1.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from language-data>=1.2->langcodes<4.0.0,>=3.2.0->spacy) (1.2.1)
     Requirement already satisfied: six>=1.5 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
-    Collecting markdown-it-py>=2.2.0 (from rich>=10.11.0->typer<1.0.0,>=0.3.0->spacy)
-      Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+    Requirement already satisfied: markdown-it-py>=2.2.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from rich>=10.11.0->typer<1.0.0,>=0.3.0->spacy) (3.0.0)
     Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from rich>=10.11.0->typer<1.0.0,>=0.3.0->spacy) (2.19.2)
-    Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.11.0->typer<1.0.0,>=0.3.0->spacy)
-      Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+    Requirement already satisfied: mdurl~=0.1 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from markdown-it-py>=2.2.0->rich>=10.11.0->typer<1.0.0,>=0.3.0->spacy) (0.1.2)
     Requirement already satisfied: MarkupSafe>=2.0 in /home/santana/anaconda3/envs/tcc_analise/lib/python3.9/site-packages (from jinja2->spacy) (3.0.2)
-    Using cached pandas-2.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
-    Downloading praw-7.8.1-py3-none-any.whl (189 kB)
-    Downloading prawcore-2.4.0-py3-none-any.whl (17 kB)
-    Downloading spacy-3.8.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (31.4 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m31.4/31.4 MB[0m [31m13.1 MB/s[0m eta [36m0:00:00[0mm eta [36m0:00:01[0m[36m0:00:01[0m
-    [?25hDownloading catalogue-2.0.10-py3-none-any.whl (17 kB)
-    Downloading cymem-2.0.11-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (208 kB)
-    Downloading langcodes-3.5.0-py3-none-any.whl (182 kB)
-    Downloading murmurhash-1.0.13-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (116 kB)
-    Downloading preshed-3.0.10-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (794 kB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m794.1/794.1 kB[0m [31m2.1 MB/s[0m eta [36m0:00:00[0m0m eta [36m0:00:01[0m
-    [?25hDownloading pydantic-2.11.7-py3-none-any.whl (444 kB)
-    Downloading pydantic_core-2.33.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.0/2.0 MB[0m [31m5.2 MB/s[0m eta [36m0:00:00[0m[31m44.4 MB/s[0m eta [36m0:00:01[0m
-    [?25hDownloading spacy_legacy-3.0.12-py2.py3-none-any.whl (29 kB)
-    Downloading spacy_loggers-1.0.5-py3-none-any.whl (22 kB)
-    Downloading srsly-2.5.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.1/1.1 MB[0m [31m2.7 MB/s[0m eta [36m0:00:00[0m0 MB/s[0m eta [36m0:00:01[0m
-    [?25hDownloading thinc-8.3.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.1 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.1/4.1 MB[0m [31m9.9 MB/s[0m eta [36m0:00:00[0m[31m32.6 MB/s[0m eta [36m0:00:01[0m
-    [?25hDownloading confection-0.1.5-py3-none-any.whl (35 kB)
-    Using cached numpy-2.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.5 MB)
-    Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
-    Downloading typer-0.16.0-py3-none-any.whl (46 kB)
-    Downloading wasabi-1.1.3-py3-none-any.whl (27 kB)
-    Downloading weasel-0.4.1-py3-none-any.whl (50 kB)
-    Downloading cloudpathlib-0.21.1-py3-none-any.whl (52 kB)
-    Downloading smart_open-7.1.0-py3-none-any.whl (61 kB)
-    Downloading nltk-3.9.1-py3-none-any.whl (1.5 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.5/1.5 MB[0m [31m3.4 MB/s[0m eta [36m0:00:00[0m[31m45.6 MB/s[0m eta [36m0:00:01[0m
-    [?25hDownloading vaderSentiment-3.3.2-py2.py3-none-any.whl (125 kB)
-    Downloading matplotlib-3.9.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m8.3/8.3 MB[0m [31m13.5 MB/s[0m eta [36m0:00:00[0m[36m0:00:01[0m
-    [?25hDownloading seaborn-0.13.2-py3-none-any.whl (294 kB)
-    Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
-    Downloading click-8.1.8-py3-none-any.whl (98 kB)
-    Downloading contourpy-1.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (321 kB)
-    Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
-    Downloading fonttools-4.58.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.7 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.7/4.7 MB[0m [31m10.6 MB/s[0m eta [36m0:00:00[0mm eta [36m0:00:01[0m
-    [?25hDownloading importlib_resources-6.5.2-py3-none-any.whl (37 kB)
-    Downloading kiwisolver-1.4.7-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.6/1.6 MB[0m [31m4.2 MB/s[0m eta [36m0:00:00[0m[36m0:00:01[0m
-    [?25hDownloading language_data-1.3.0-py3-none-any.whl (5.4 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.4/5.4 MB[0m [31m11.1 MB/s[0m eta [36m0:00:00[0m31m42.5 MB/s[0m eta [36m0:00:01[0m
-    [?25hDownloading marisa_trie-1.2.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/1.3 MB[0m [31m4.2 MB/s[0m eta [36m0:00:00[0m[31m54.0 MB/s[0m eta [36m0:00:01[0m
-    [?25hDownloading pillow-11.2.1-cp39-cp39-manylinux_2_28_x86_64.whl (4.6 MB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.6/4.6 MB[0m [31m8.8 MB/s[0m eta [36m0:00:00[0m[31m43.0 MB/s[0m eta [36m0:00:01[0m
-    [?25hDownloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
-    Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
-    Downloading regex-2024.11.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (780 kB)
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m780.9/780.9 kB[0m [31m2.0 MB/s[0m eta [36m0:00:00[0m[31m45.9 MB/s[0m eta [36m0:00:01[0m
-    [?25hDownloading rich-14.0.0-py3-none-any.whl (243 kB)
-    Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
-    Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
-    Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
-    Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
-    Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
-    Downloading update_checker-0.18.0-py3-none-any.whl (7.0 kB)
-    Downloading joblib-1.5.1-py3-none-any.whl (307 kB)
-    Downloading wrapt-1.17.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (82 kB)
-    Installing collected packages: pytz, cymem, wrapt, wasabi, tzdata, typing-inspection, tqdm, spacy-loggers, spacy-legacy, shellingham, regex, pyparsing, pydantic-core, pillow, numpy, murmurhash, mdurl, marisa-trie, kiwisolver, joblib, importlib-resources, fonttools, cycler, cloudpathlib, click, catalogue, annotated-types, vaderSentiment, update_checker, srsly, smart-open, pydantic, preshed, prawcore, pandas, nltk, markdown-it-py, language-data, contourpy, blis, rich, praw, matplotlib, langcodes, confection, typer, thinc, seaborn, weasel, spacy
-    [2K   [38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m50/50[0m [spacy]/50[0m [spacy]/50[0m [weasel]seaborn]ib]ta]]]
-    [1A[2KSuccessfully installed annotated-types-0.7.0 blis-1.3.0 catalogue-2.0.10 click-8.1.8 cloudpathlib-0.21.1 confection-0.1.5 contourpy-1.3.0 cycler-0.12.1 cymem-2.0.11 fonttools-4.58.4 importlib-resources-6.5.2 joblib-1.5.1 kiwisolver-1.4.7 langcodes-3.5.0 language-data-1.3.0 marisa-trie-1.2.1 markdown-it-py-3.0.0 matplotlib-3.9.4 mdurl-0.1.2 murmurhash-1.0.13 nltk-3.9.1 numpy-2.0.2 pandas-2.3.0 pillow-11.2.1 praw-7.8.1 prawcore-2.4.0 preshed-3.0.10 pydantic-2.11.7 pydantic-core-2.33.2 pyparsing-3.2.3 pytz-2025.2 regex-2024.11.6 rich-14.0.0 seaborn-0.13.2 shellingham-1.5.4 smart-open-7.1.0 spacy-3.8.7 spacy-legacy-3.0.12 spacy-loggers-1.0.5 srsly-2.5.1 thinc-8.3.6 tqdm-4.67.1 typer-0.16.0 typing-inspection-0.4.1 tzdata-2025.2 update_checker-0.18.0 vaderSentiment-3.3.2 wasabi-1.1.3 weasel-0.4.1 wrapt-1.17.2
     
     --- Importando módulos... ---
-
-
-    Matplotlib is building the font cache; this may take a moment.
-
-
-    Collecting praw
-      Using cached praw-7.8.1-py3-none-any.whl (189 kB)
-    Collecting update_checker>=0.18
-      Using cached update_checker-0.18.0-py3-none-any.whl (7.0 kB)
-    Requirement already satisfied: websocket-client>=0.54.0 in /home/santana/anaconda3/lib/python3.9/site-packages (from praw) (0.58.0)
-    Collecting prawcore<3,>=2.4
-      Using cached prawcore-2.4.0-py3-none-any.whl (17 kB)
-    Requirement already satisfied: requests<3.0,>=2.6.0 in /home/santana/anaconda3/lib/python3.9/site-packages (from prawcore<3,>=2.4->praw) (2.28.1)
-    Requirement already satisfied: six in /home/santana/anaconda3/lib/python3.9/site-packages (from websocket-client>=0.54.0->praw) (1.16.0)
-    Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/santana/anaconda3/lib/python3.9/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw) (1.26.13)
-    Requirement already satisfied: charset-normalizer<3,>=2 in /home/santana/anaconda3/lib/python3.9/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw) (2.0.7)
-    Requirement already satisfied: idna<4,>=2.5 in /home/santana/anaconda3/lib/python3.9/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw) (3.3)
-    Requirement already satisfied: certifi>=2017.4.17 in /home/santana/anaconda3/lib/python3.9/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw) (2021.10.8)
-    Installing collected packages: update_checker, prawcore, praw
-    Successfully installed praw-7.8.1 prawcore-2.4.0 update_checker-0.18.0
-    Requirement already satisfied: matplotlib in /home/santana/anaconda3/lib/python3.9/site-packages (3.5.2)
-    Requirement already satisfied: seaborn in /home/santana/anaconda3/lib/python3.9/site-packages (0.11.2)
-    Requirement already satisfied: pyparsing>=2.2.1 in /home/santana/anaconda3/lib/python3.9/site-packages (from matplotlib) (3.0.9)
-    Requirement already satisfied: cycler>=0.10 in /home/santana/anaconda3/lib/python3.9/site-packages (from matplotlib) (0.11.0)
-    Requirement already satisfied: numpy>=1.17 in /home/santana/anaconda3/lib/python3.9/site-packages (from matplotlib) (2.0.2)
-    Requirement already satisfied: pillow>=6.2.0 in /home/santana/anaconda3/lib/python3.9/site-packages (from matplotlib) (9.2.0)
-    Requirement already satisfied: fonttools>=4.22.0 in /home/santana/anaconda3/lib/python3.9/site-packages (from matplotlib) (4.25.0)
-    Requirement already satisfied: packaging>=20.0 in /home/santana/anaconda3/lib/python3.9/site-packages (from matplotlib) (21.3)
-    Requirement already satisfied: python-dateutil>=2.7 in /home/santana/anaconda3/lib/python3.9/site-packages (from matplotlib) (2.8.2)
-    Requirement already satisfied: kiwisolver>=1.0.1 in /home/santana/anaconda3/lib/python3.9/site-packages (from matplotlib) (1.4.2)
-    Requirement already satisfied: pandas>=0.23 in /home/santana/anaconda3/lib/python3.9/site-packages (from seaborn) (2.2.3)
-    Requirement already satisfied: scipy>=1.0 in /home/santana/anaconda3/lib/python3.9/site-packages (from seaborn) (1.9.1)
-    Requirement already satisfied: pytz>=2020.1 in /home/santana/anaconda3/lib/python3.9/site-packages (from pandas>=0.23->seaborn) (2021.3)
-    Requirement already satisfied: tzdata>=2022.7 in /home/santana/anaconda3/lib/python3.9/site-packages (from pandas>=0.23->seaborn) (2025.2)
-    Requirement already satisfied: six>=1.5 in /home/santana/anaconda3/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib) (1.16.0)
-    Collecting numpy>=1.17
-      Using cached numpy-1.24.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
-    Installing collected packages: numpy
-      Attempting uninstall: numpy
-        Found existing installation: numpy 2.0.2
-        Uninstalling numpy-2.0.2:
-          Successfully uninstalled numpy-2.0.2
-    [31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-    daal4py 2021.6.0 requires daal==2021.4.0, which is not installed.
-    thinc 8.3.6 requires numpy<3.0.0,>=2.0.0, but you have numpy 1.24.4 which is incompatible.
-    numba 0.55.1 requires numpy<1.22,>=1.18, but you have numpy 1.24.4 which is incompatible.[0m[31m
-    [0mSuccessfully installed numpy-1.24.4
-    Todas as bibliotecas foram instaladas e importadas com sucesso!
 
 
  A mensagem "Matplotlib is building the font cache; this may take a moment." não é um erro. É uma mensagem informativa que indica que a biblioteca Matplotlib está configurando seu cache de fontes pela primeira vez no seu ambiente.
@@ -362,13 +199,17 @@ except LookupError:
     
     --- Baixando modelos de PLN (executado uma única vez)... ---
     Recursos do NLTK não encontrados. Baixando agora...
-    Download do NLTK concluído.
 
 
     [nltk_data] Downloading package stopwords to
     [nltk_data]     /home/santana/nltk_data...
     [nltk_data]   Package stopwords is already up-to-date!
     [nltk_data] Downloading package punkt to /home/santana/nltk_data...
+
+
+    Download do NLTK concluído.
+
+
     [nltk_data]   Package punkt is already up-to-date!
     [nltk_data] Downloading package vader_lexicon to
     [nltk_data]     /home/santana/nltk_data...
@@ -424,9 +265,9 @@ Esta etapa demonstra como o dataset foi originalmente coletado da API do Reddit.
 # Em um projeto real, use variáveis de ambiente ou um arquivo .env para segurança.
 # ==============================================================================
 # Substitua 'SEU_CLIENT_ID' pelo Client ID que você obteve no Reddit
-REDDIT_CLIENT_ID = 'gv_gATrqN50sSGvevZa0hA'
+REDDIT_CLIENT_ID = 'gv_****************Za0hA'
 # Substitua 'SEU_CLIENT_SECRET' pelo Client Secret que você obteve no Reddit
-REDDIT_CLIENT_SECRET = 'htzOZxfqPzSNi6it9vwdf9znItPr7A'
+REDDIT_CLIENT_SECRET = 'htzO***************9znItPr7A'
 # Um nome único e descritivo para o seu script (ex: nome do seu TCC)
 REDDIT_USER_AGENT = 'TCC_Monitor_Vazamentos_CarlosSantana_v1.0'
 
@@ -668,7 +509,7 @@ def coletar_dados_de_vazamentos(
 # já pode gerar um volume bem alto. Ajuste conforme sua necessidade e limites da API.
 # Para 1000 registros finais relevantes, pode ser necessário buscar 500-1000 posts por subreddit
 # dependendo da densidade de palavras-chave.
-LIMITE_POSTS_POR_SUBREDDIT_ALVO = 10 # Tentará buscar até X posts de CADA subreddit
+LIMITE_POSTS_POR_SUBREDDIT_ALVO = 500 # Tentará buscar até X posts de CADA subreddit
 ```
 
 
@@ -1346,7 +1187,7 @@ def ler_arquivo_csv(caminho_do_arquivo):
 # Célula de Código: Execução do Pipeline (agora mais simples!)
 
 # Apenas defina o nome do arquivo e chame a função
-nome_do_arquivo_bruto = 'dados_reddit_vazamentos_2025-06-29_193934.csv'
+nome_do_arquivo_bruto = 'dados_reddit_vazamentos_2025-06-28_201606.csv'
 df_bruto = ler_arquivo_csv(nome_do_arquivo_bruto)
 
 # Se o DataFrame não estiver vazio (ou seja, o arquivo foi lido com sucesso)
@@ -1362,8 +1203,8 @@ else:
     df_enriched = pd.DataFrame()
 ```
 
-    --- Tentando carregar o arquivo 'dados_reddit_vazamentos_2025-06-29_193934.csv' ---
-    Arquivo carregado com sucesso. Total de 217 registros.
+    --- Tentando carregar o arquivo 'dados_reddit_vazamentos_2025-06-28_201606.csv' ---
+    Arquivo carregado com sucesso. Total de 6098 registros.
     
     Iniciando o processo de enriquecimento do DataFrame...
     Passo 3.1: Pré-processando o texto...
@@ -1374,7 +1215,7 @@ else:
     Passo 3.6: Adicionando métricas de texto (comprimento, URLs)...
     
     --- Processo de Enriquecimento Concluído! ---
-    Número total de posts enriquecidos: 217
+    Número total de posts enriquecidos: 6098
 
 
 
@@ -1427,7 +1268,7 @@ else:
       <td>2020-07-15 17:58:44</td>
       <td>Bill Gates twitter was hacked😱</td>
       <td>cybersecurity</td>
-      <td>2910</td>
+      <td>2904</td>
       <td>316</td>
       <td>https://i.redd.it/xe5vt56m43b51.jpg</td>
       <td>NaN</td>
@@ -1470,74 +1311,74 @@ else:
     </tr>
     <tr>
       <th>2</th>
-      <td>8aragr</td>
-      <td>2018-04-08 14:06:00</td>
-      <td>2018-04-08 14:06:00</td>
-      <td>TIL Mark Zuckerberg was sued by 3 reporters fr...</td>
-      <td>privacy</td>
-      <td>8407</td>
-      <td>241</td>
-      <td>http://www.businessinsider.com/how-mark-zucker...</td>
-      <td>NaN</td>
+      <td>18bagzk</td>
+      <td>2023-12-05 09:00:51</td>
+      <td>2023-12-05 09:00:51</td>
+      <td>23andMe confirms hackers stole ancestry data o...</td>
+      <td>cybersecurity</td>
+      <td>2289</td>
+      <td>291</td>
+      <td>https://techcrunch.com/2023/12/04/23andme-conf...</td>
+      <td>&gt;In disclosing the incident in October, 23andM...</td>
       <td>Fórum_Reddit</td>
       <td>...</td>
-      <td>-0.4019</td>
+      <td>-0.3182</td>
       <td>Outro/Não Específico</td>
-      <td>[the Crimson]</td>
+      <td>[]</td>
       <td>[Hacking]</td>
-      <td>[Email]</td>
       <td>[]</td>
       <td>[]</td>
-      <td>240</td>
-      <td>39</td>
+      <td>[]</td>
+      <td>282</td>
+      <td>42</td>
       <td>False</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>jq4y8w</td>
-      <td>2020-11-08 00:49:49</td>
-      <td>2020-11-08 00:49:49</td>
-      <td>The Trump campaign hastily set-up a website to...</td>
-      <td>privacy</td>
-      <td>8223</td>
-      <td>262</td>
-      <td>https://donttouchthegreenbutton.com/</td>
-      <td>NaN</td>
+      <td>p9fo4d</td>
+      <td>2021-08-22 13:32:32</td>
+      <td>2021-08-22 13:32:32</td>
+      <td>My thoughts on a decade of Cyber Security: 10 ...</td>
+      <td>cybersecurity</td>
+      <td>2011</td>
+      <td>112</td>
+      <td>https://www.reddit.com/r/cybersecurity/comment...</td>
+      <td>I’ve spent a little more than a decade working...</td>
       <td>Fórum_Reddit</td>
       <td>...</td>
-      <td>-0.8074</td>
+      <td>0.5859</td>
       <td>Outro/Não Específico</td>
+      <td>[SOC]</td>
       <td>[]</td>
       <td>[]</td>
       <td>[]</td>
       <td>[]</td>
-      <td>[]</td>
-      <td>302</td>
-      <td>50</td>
+      <td>270</td>
+      <td>46</td>
       <td>False</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>dek4wz</td>
-      <td>2019-10-07 11:24:35</td>
-      <td>2019-10-07 11:24:35</td>
-      <td>Here we go again: US govt tells Facebook to ki...</td>
-      <td>infosec</td>
-      <td>43</td>
-      <td>5</td>
-      <td>https://www.theregister.co.uk/2019/10/04/us_go...</td>
-      <td>NaN</td>
+      <td>1is6q7e</td>
+      <td>2025-02-18 03:54:40</td>
+      <td>2025-02-18 03:54:40</td>
+      <td>Exploit Found in Elon Musk’s X Allows Unauthor...</td>
+      <td>cybersecurity</td>
+      <td>1976</td>
+      <td>70</td>
+      <td>https://www.reddit.com/r/cybersecurity/comment...</td>
+      <td>A newly discovered exploit in Elon Musk’s X pl...</td>
       <td>Fórum_Reddit</td>
       <td>...</td>
-      <td>-0.6908</td>
+      <td>-0.0772</td>
       <td>Outro/Não Específico</td>
+      <td>[Exploit Found in Elon Musk’s X Allows Unautho...</td>
       <td>[]</td>
       <td>[]</td>
       <td>[]</td>
       <td>[]</td>
-      <td>[]</td>
-      <td>103</td>
-      <td>19</td>
+      <td>274</td>
+      <td>44</td>
       <td>False</td>
     </tr>
   </tbody>
@@ -1569,17 +1410,12 @@ else:
 ```
 
     
-    DataFrame enriquecido salvo com sucesso em 'dados_reddit_enriquecidos_2025-06-29_205357.csv'.
+    DataFrame enriquecido salvo com sucesso em 'dados_reddit_enriquecidos_2025-06-29_212655.csv'.
 
 
 ### Análise e Visualização dos Dados
 
 Com os dados enriquecidos, podemos finalmente realizar análises preliminares e criar visualizações para entender as tendências nas discussões sobre vazamentos de dados. As novas colunas que criamos nos permitem responder a perguntas como: Qual é o sentimento predominante? Quais são os principais pedidos de ajuda? Quais tipos de ataque são mais mencionados?
-
-
-```python
-
-```
 
 
 ```python
@@ -1590,7 +1426,7 @@ import seaborn as sns
 
 # Carregar Dados Enriquecidos para Visualização
 # Apenas defina o nome do arquivo e chame a função
-nome_do_arquivo_enriquecido = 'dados_reddit_enriquecidos_2025-06-29_205357.csv'
+nome_do_arquivo_enriquecido = 'dados_reddit_enriquecidos_2025-06-29_212655.csv'
 df_enriched = ler_arquivo_csv(nome_do_arquivo_enriquecido)
 
 # Agora você pode executar a célula de visualização (Passo 6) diretamente
@@ -1677,8 +1513,8 @@ else:
     print("DataFrame enriquecido não disponível para análise. Execute as células anteriores.")
 ```
 
-    --- Tentando carregar o arquivo 'dados_reddit_enriquecidos_2025-06-29_205357.csv' ---
-    Arquivo carregado com sucesso. Total de 217 registros.
+    --- Tentando carregar o arquivo 'dados_reddit_enriquecidos_2025-06-29_212655.csv' ---
+    Arquivo carregado com sucesso. Total de 6098 registros.
     
     DataFrame 'df_enriched' está pronto para a visualização dos gráficos!
     
@@ -1691,7 +1527,7 @@ else:
 
 
     
-![png](VazamentoDados_files/VazamentoDados_32_1.png)
+![png](VazamentoDados_files/VazamentoDados_31_1.png)
     
 
 
